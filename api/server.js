@@ -13,7 +13,7 @@ server.use(helmet());
 server.use(express.json());
 
 server.use('/api/auth', authRouter);
-server.use('/api/users', restricted, usersRouter);
+server.use('/api/users', usersRouter); // restricted
 
 server.get('/', (req, res) => {
     res.send("Welcome to the Vacation Planner API!");
